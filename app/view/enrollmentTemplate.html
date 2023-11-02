@@ -1,0 +1,27 @@
+<div ng-controller="enrollmentController">
+    <h2>Course Enrollment</h2>
+
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Course Name</th>
+                <th scope="col">Enrolled Students</th>
+                <th scope="col">Capacity</th>
+                <th scope="col">Action</th>
+
+            </tr>
+        </thead>
+        <tr ng-repeat="course in courses" scope="row">
+            <td>{{ course.name }}</td>
+            <td>{{ course.total_enrolled }}</td>
+            <td>{{ course.max_capacity }}</td>
+            <td>
+                <button class="btn btn-info"
+                ng-click="enrollStudent(course)"
+                ng-disabled="course.enrollmentButtonDisabled || isEnrollmentFull(course)">
+            Enroll Student
+        </button>
+            </td>
+        </tr>
+    </table>
+</div>

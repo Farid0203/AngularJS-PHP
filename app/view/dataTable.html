@@ -1,0 +1,85 @@
+<div class="data-table-page" ng-controller="dataController" ng-init="initFunction()">
+    <div class="dataTableHeader">
+        <div>
+            <img src="app/style/images/button.png" alt="" ng-click="">
+            <input id="customSearchInput" type="search" placeholder="Search....">
+
+        </div>
+        <button class="btn" ng-click="studentPage()">+ Add Student</button>
+
+    </div>
+    <table id="example" class="student-tbl">
+        <thead>
+            <tr>
+                <th class="checkbox-width center-align no-sort"><input class="custom-checkbox" type="checkbox"></th>
+                <th>#</th>
+                <th>NAME</th>
+                <th>EMAIL</th>
+                <th>GENDER</th>
+                <th class="center-align">AGE</th>
+                <th class="center-align">APPLIED SPECIALIZATION</th>
+                <th>VIEW</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="student in studentsData">
+                <td class="checkbox-width center-align no-sort"><input type="checkbox" class="custom-checkbox"></td>
+                <td><strong>{{student.id}}</strong></td>
+                <td><strong>{{ student.firstName+' '+student.lastName }}</strong></td>
+                <td>{{ student.email }}</td>
+                <td>{{ student.gender}}</td>
+                <td class="center-align">{{ student.dateOfBirth | calculateAge }}</td>
+                <td class="center-align">{{ student.degree}}</td>
+                <td class="unique-column"><img class="arrow" src="app/style/images/fullscreen enter arrows.png" alt=""
+                        ng-click="showDetails(student)" data-toggle="modal" data-target="#showOnlyModal" />
+
+                    <img class="image-hidden" src="app/style/images/threedot.png" alt="Image on Hover"
+                        ng-click="editStudent(student)" data-toggle="modal" data-target="#editModal" />
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+   
+    
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="showOnlyModal" tabindex="-1" role="dialog" aria-labelledby="showOnlyModalTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-head">
+
+                    <input type="button" value="Cancel" class="btn pop-up-btn" data-dismiss="modal"
+                        aria-label="Close" />
+
+                </div>
+                <div>
+                    <view-modal student="studentComponent"></view-modal>
+                </div>
+                
+
+               
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+
+            <edit-modal student="selectedStudent" on-update="onUpdate()"></edit-modal>
+
+        </div>
+    </div>
+
+
+
+
+</div>

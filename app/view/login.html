@@ -1,0 +1,56 @@
+<div ng-controller="loginController" class="login-page">
+  <header>
+    <h1>Login</h1>
+  </header>
+  <div class="login_content">
+    <div class="login_img_div">
+      <img src="app/style/images/20547283_6310507 1.png" alt="image load error">
+    </div>
+    <div class="login_content_div">
+      <form name="loginForm" ng-submit="loginValidation()" novalidate>
+      <div class="container">
+        <div class="switch">
+          <input type="radio" class="switch-input" name="view" value="admin" id="admin" checked  ng-model="user.usertype">
+          <label for="admin" class="switch-label switch-label-off">Admin</label>
+          <input ng-model="user.usertype" type="radio" class="switch-input" name="view" value="student" id="student">
+          <label for="student" class="switch-label switch-label-on">Student</label>
+          <span class="switch-selection"></span>
+
+        </div>
+      </div>
+      <br>
+
+      <label class="login_label" for="username">Username</label>
+      <input class="login_input1" type="text" name="username" placeholder="Enter Username" ng-model="user.username" required>
+      <div class="error-message" ng-show="errorMessages.username"><span style="color: red; font-size: 12px;">{{errorMessages.username}}</span></div>
+
+      <br>
+      <label class="login_label" for="password">Password </label>
+      <input class="login_input2" type="password" name="password" placeholder="Enter Password" ng-model="user.password" required>
+      <div class="error-message" ng-show="errorMessages.password"><span style="color: red; font-size: 12px;">{{errorMessages.password}}</span></div>
+      <br>
+      <input type="submit" value="Sign In" ng-click="popUp()" data-toggle="modal" class="sign_in_btn" data-target="#exampleModalCenter" id="sign-in">
+      </form>
+    </div>
+  </div>
+
+<!-- Modal -->
+<div class="modal fade" ng-if="showModal" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-head">
+        
+          <img src="app/style/images/Frame 1041.png" alt="" class="close" data-dismiss="modal" aria-label="Close">
+
+      </div>
+      <div class="modal-body">
+        <img src="{{display.image}}" width="80" alt="">
+        <p>{{display.usertype}} - {{display.username}} {{display.default}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+  <footer>
+    <p>Dont have an account? <a href="#!/register">Sign Up</a></p>
+  </footer>
+</div>

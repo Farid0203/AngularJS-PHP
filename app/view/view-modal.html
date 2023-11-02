@@ -1,0 +1,78 @@
+<div class="view-modal">
+
+    <div class="view-modal-data">
+        <h6>Name</h6>
+        <p>{{ $ctrl.student.firstName + ' ' + $ctrl.student.lastName }}</p>
+
+    </div>
+
+    <div class="view-modal-data">   
+        <h6>Email</h6>
+        <p>{{ $ctrl.student.email }}</p>
+    </div>
+
+    <div class="view-modal-data">
+        <h6>PhoneNumber</h6>
+        <p>{{ $ctrl.student.phoneNumber }}</p>
+    </div>
+
+    <div class="view-modal-data">
+        <h6>Gender</h6>
+        <p>{{ $ctrl.student.gender }}</p>
+    </div>
+
+    <div class="view-modal-data">
+        <h6>Date of Birth</h6>
+        <p>{{ $ctrl.student.dateOfBirth | date:'dd MMM yyyy' }}</p>
+    </div>
+
+    <div class="view-modal-data">
+        <h6>Age</h6>
+        <p>{{ $ctrl.student.dateOfBirth | calculateAge }}</p>
+    </div>
+
+    <div class="view-modal-data">
+        <h6>Degree</h6>
+        <p>{{ $ctrl.student.degree }}</p>
+    </div>
+
+    <div class="view-modal-data">
+        <h6>Department</h6>
+        <p>{{ $ctrl.student.department || "N/A" }}</p>
+    </div>
+    <div class="view-modal-data">
+        <h6>Degree Type</h6>
+        <p>{{ $ctrl.student.degreeType}}</p>
+    </div>
+    <div class="view-modal-data">
+        <h6>Part Time Timings</h6>
+        <p>{{ $ctrl.student.partTimeTiming || "N/A" }}</p>
+    </div>
+
+    <div class="view-modal-data">
+        <h6>Fathers Name</h6>
+        <p>{{ $ctrl.student.fatherName}}</p>
+    </div>
+
+    <div class="view-modal-data">
+        <h6>Mothers Name</h6>
+        <p>{{ $ctrl.student.motherName}}</p>
+    </div>
+
+
+    <div class="view-modal-data">
+        <h6>Current Address</h6>
+        <p>{{ $ctrl.student.currentAddress }}</p>
+    </div>
+
+    <div class="view-modal-data">
+        <h6>Permanent Address</h6>
+        <p>{{ $ctrl.student.permanentAddress }}</p>
+    </div>
+
+    <button class="btn" ng-click="$ctrl.generatePDF($ctrl.student)">Generate PDF</button>
+    
+ 
+
+
+</div>

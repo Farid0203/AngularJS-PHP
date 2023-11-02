@@ -1,0 +1,100 @@
+<div ng-controller="adminController" class="registration-page">
+  <header class="reg_header">
+    <h1>
+      Registration page
+    </h1>
+  </header>
+
+  <div class="admin_registration">
+
+
+    <div class="reg_img_div">
+      <h1>Registration Page</h1>
+      <img class="reg_img" src="app/style/images/Screenshot 2023-07-20 at 5.19 1.png" alt="">
+      <p>Already Have an account?<a href="#!/login"> Sign In</a> </p>
+    </div>
+    <div class="admin_registration_div">
+      <div class="reg_form">
+        <form name="adminRegistrationForm" ng-submit="adminRegistrationValidation()" novalidate>
+          <div class="container">
+            <div class="switch">
+              <input type="radio" class="switch-input" name="view" value="admin" id="admin" checked
+                ng-model="user.userType">
+              <label for="admin" class="switch-label switch-label-off">Admin</label>
+              <input type="radio" class="switch-input" name="view" value="student" id="student"
+                ng-model="user.userType">
+              <label for="student" class="switch-label switch-label-on">Student</label>
+              <span class="switch-selection"></span>
+
+            </div>
+          </div>
+          <br>
+
+          <div class="form-row">
+            <label class="reg_label" for="username">Username</label>
+            <input class="admin_reg_input" type="text" name="userName" placeholder="Enter Username"
+              ng-model="user.userName">
+            <div class="error-message" ng-show="errorMessages.userName"><span>{{errorMessages.userName}}</span></div>
+          </div>
+
+          <div class="form-row">
+            <label class="reg_label" for="emailId">E-Mail ID</label>
+            <input class="admin_reg_input" type="email" name="emailId" placeholder="Enter E-Mail" ng-model="user.email">
+            <div class="error-message" ng-show="errorMessages.email"><span>{{errorMessages.email}}</span></div>
+          </div>
+
+          <div class="form-row">
+            <label class="reg_label" for="number">Phone Number</label>
+            <input class="admin_reg_input" type="text" id="phoneNumber" placeholder="Enter Phone Number"
+              ng-model="user.number">
+            <div class="error-message" ng-show="errorMessages.number"><span>{{errorMessages.number}}</span></div>
+          </div>
+
+          <div class="form-row">
+            <label class="reg_label" for="password">Password</label>
+            <input class="admin_reg_input" type="password" name="password" placeholder="Enter Password"
+              ng-model="user.password">
+            <div class="error-message" ng-show="errorMessages.password">
+              <span>{{errorMessages.password}}</span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label class="reg_label" for="password">Re-Enter Password</label>
+            <input class="admin_reg_input" type="password" name="password" placeholder="Enter Password Again"
+              ng-model="user.rePassword">
+            <div class="error-message" ng-show="errorMessages.rePassword"><span>{{errorMessages.rePassword}}</span>
+            </div>
+          </div>
+          <input type="submit" value="Sign Up" class="sign_in_btn" ng-click="popUp()" data-toggle="modal"
+            data-target="#exampleModalCenter">
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal text-center" ng-if="showModal" id="exampleModalCenter" tabindex="-1" role="dialog"
+    aria-labelledby="#exampleModalCenter" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <img src="{{display.image}}" width="80" alt="">
+          <p>{{display.userType}} - {{display.username}} {{display.default}}</p>
+          <div>
+            <button ng-click="navigate()" class="popup-signin-btn" ng-show="showButton" data-dismiss="modal"
+              class="close">Sign In</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <footer>
+    <p>Dont have an account? <a href="#!/register">Sign Up</a></p>
+  </footer> -->
+
+  <footer class="reg_footer">
+    <p>Already have account?<a href="login">Sign In</a></p>
+  </footer>
+</div>

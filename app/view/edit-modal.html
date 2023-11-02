@@ -1,0 +1,128 @@
+<div ng-controller="EditController">
+    <div class="modal-content ">
+
+        <div class="modal-head">
+
+            
+            <input type="button" value="Cancel" class="btn pop-up-btn" data-dismiss="modal" aria-label="Close" />
+            
+            <div class="success-msg">
+                <span ng-show="$ctrl.formSubmitted">Student Updated </span>
+             </div>
+            
+        </div>
+        
+
+        <div class="edit-modal-body">
+            
+          
+            
+            <form>
+                <div class="edit-modal-data ">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" class="form-control" ng-model="$ctrl.student.firstName" apply-error-class>
+                </div>
+
+                <div class="edit-modal-data ">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" class="form-control" ng-model="$ctrl.student.lastName">
+                </div>
+
+                <div class="edit-modal-data">
+                    <label for="email">Email</label>
+                    <input type="text" id="email" class="form-control" ng-model="$ctrl.student.email">
+                </div>
+                <div class="edit-modal-data">
+                    <label for="phoneNumber">Phone Number</label>
+                    <input type="text" id="phoneNumber" class="form-control" ng-model="$ctrl.student.phoneNumber">
+                </div>
+
+
+
+                <div class="edit-modal-data">
+                    <label for="datepicker-modal">Date of Birth</label>
+                    <input type="text" id="datepicker-modal" class="form-control date-input" ng-click="openDatePicker()"
+                        placeholder="{{$ctrl.student.dateOfBirth | date:'dd MMM yyyy' }}" ng-model="$ctrl.selectedDate">
+                </div>
+
+                <div class="edit-modal-data">
+                    <label for="gender">Gender</label>
+                    <select class="form-control" name="gender" id="gender" ng-model="$ctrl.student.gender"
+                        ng-required="true">
+                        <option value="" disabled>Select the gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Transgender">Transgender</option>
+                    </select>
+                </div>
+                <div class="edit-modal-data">
+                    <label for="degree">Degree</label>
+                    <select class="form-control" name="degree" id="degree" ng-model="$ctrl.student.degree"
+                        ng-change="$ctrl.handleDegreeChange()">
+                        <option value="" disabled>Select the department</option>
+                        <option value="BCA">BCA</option>
+                        <option value="BE">BE</option>
+
+                    </select>
+                </div>
+                <div class="edit-modal-data">
+                    <label for="department">Department</label>
+                    <select class="form-control" name="department" id="department" ng-model="$ctrl.student.department"
+                        ng-disabled="$ctrl.isDepartmentDisabled">
+                        <option value="" disabled>Select the department</option>
+                        <option value="IT">IT</option>
+                        <option value="MECH">MECH</option>
+                        <option value="CIVIL">CIVIL</option>
+                        <option value="CSE">CSE</option>
+
+                    </select>
+                </div>
+
+               
+
+            </form>
+        </div>
+
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="submit" ng-click="$ctrl.saveChanges($ctrl.student.studentId)" class="btn btn-primary">Save Changes</button>
+        </div>
+
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="edit-modal-data">
+                    <label for="name">Date of Birth</label>
+                    <input type="date" id="customDatePicker" class="form-control datepicker"
+                        ng-model="$ctrl.student.dob">
+                    <date-picker></date-picker>
+                </div> -->

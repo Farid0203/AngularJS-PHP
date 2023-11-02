@@ -1,0 +1,324 @@
+.data-table-page {
+  font-family: 'Inter', sans-serif;
+}
+
+.unique-column {
+  display: flex;
+  justify-content: space-between;
+  height: 68px;
+}
+
+.arrow {
+  cursor: pointer;
+}
+
+.image-hidden {
+  display: none;
+}
+
+tr:hover .image-hidden {
+  width: 45px;
+  display: inline-block;
+  padding-right: 15px;
+  cursor: pointer;
+}
+
+.dataTables_length select {
+  width: 50px;
+  appearance: none;
+  background: url(../images/down.png)no-repeat;
+  background-position: right;
+  background-size: 20px;
+  background-origin: content-box;
+  border: none !important;
+  justify-content: space-between;
+
+
+}
+
+.dataTables_info {
+  flex: 60%;
+
+}
+
+
+.custom-bottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 30px;
+}
+
+.dataTables_wrapper {
+  background-color: #F5F5F5BF;
+}
+
+.dataTables_paginate .paginate_button.disabled {
+  border: 2px solid #464F603D !important;
+  background-color:
+    #F7F9FC !important;
+
+}
+
+/* Move sorting icon to the left of column header text */
+table.dataTable thead .sorting {
+  background-position: center !important;
+}
+
+table.dataTable thead .sorting_asc {
+  background-image: none !important;
+}
+
+
+table {
+  table-layout: auto;
+}
+
+
+.dataTables_length {
+  width: fit-content;
+  display: inline-block;
+  padding-right: 30px;
+
+}
+
+.dataTables_length label {
+  margin: 0px;
+}
+
+.dataTables_paginate {
+  width: 100px;
+  justify-content: space-between;
+}
+
+.paginate_button {
+  border: 2px solid #464F603D !important;
+  padding: 0px 8px !important;
+  border-radius: 8px !important;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: white !important;
+}
+
+.dataTables_paginate {
+  display: flex;
+
+}
+
+table th,
+table {
+  border-color: #e4ebf9 !important;
+}
+
+.center-align {
+  text-align: center;
+}
+
+.student-tbl>tbody>tr:hover>* {
+  background-color: #F2F5FA;
+}
+
+.dataTables_paginate_custom {
+
+  width: fit-content;
+  display: block;
+  color: black;
+
+}
+
+#rowsPerPageSelect {
+  border: none;
+  letter-spacing: 3px;
+}
+
+.sorting_asc {
+  width: 100px;
+}
+
+.checkbox-width {
+  width: fit-content;
+}
+
+.dataTableHeader {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #F5F5F5BF;
+  font-size: 18px;
+
+
+}
+
+.dataTableHeader div {
+  display: flex;
+  width: 40%;
+  justify-content: flex-start;
+
+}
+
+.dataTableHeader img {
+  width: 65px;
+  margin: 10px;
+}
+
+.btn {
+  background-color: #686AC9;
+  color: white;
+  padding: 6px 20px;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.custom-checkbox {
+  border-radius: 8px;
+}
+
+.dataTableHeader input[type=search] {
+  width: 65%;
+  background-image: url(../images/Search.png);
+  background-size: 20px;
+  background-repeat: no-repeat;
+  padding-left: 40px;
+  background-position: 10px center;
+  height: 40px;
+  border: 1px solid lightgray;
+  border-radius: 6px;
+  background-color: white;
+  color: #A1A9B8;
+}
+
+.student-tbl {
+  font-size: 18px;
+}
+
+.student-tbl thead {
+  background: #F5F5F5BF;
+
+}
+
+.student-tbl thead th {
+  color: #464F60;
+  line-height: 14px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.student-tbl tbody td strong {
+  color: #464F60;
+}
+
+.student-tbl tbody tr.odd {
+  background-color: rgb(255, 255, 255);
+  /* Light gray */
+}
+
+.student-tbl tbody tr.even {
+  background-color: #F9FAFC;
+  /* White */
+}
+
+.student-tbl tbody tr {
+  height: 64px;
+}
+
+.view-modal {
+
+  width: 500px;
+  background-origin: white;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.view-modal p {
+  margin: 0px;
+  width: 50%;
+  font-size: 14px;
+  font-weight: 400;
+  color: #54595E99;
+
+
+
+}
+
+.view-modal h6,
+.edit-modal-data label {
+  margin: 0px;
+  width: 50%;
+  font-size: 20px;
+  font-weight: 600;
+  color: #54595E;
+  padding-left: 10px;
+}
+
+
+.edit-modal-data input,.edit-modal-data select{
+  border: 1px solid lightgray;
+  height: 35px;
+  width: 65%;
+  border-radius: 6px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+ 
+}
+
+.edit-modal-data select{
+  appearance: none;
+  background: url('../images/triangle.png') no-repeat right center;
+  background-origin: content-box;
+}
+
+.view-modal-data, .edit-modal-data {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.edit-modal-data{
+  padding:  15px 30px;
+}
+
+.date-input {
+  padding-right: 10px; /* Adjust the padding to make space for the icon */
+  background-image: url('../images/Calendar\ today.png'); /* Replace with the path to your icon */
+  background-origin: content-box;
+  background-repeat: no-repeat;
+  background-position: right; /* Adjust icon position as needed */
+  cursor: pointer; /* Add a pointer cursor for usability */
+}
+
+
+.modal-head input {
+  float: right;
+}
+
+.pop-up-btn {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 5px 10px;
+}
+
+.modal-content {
+  padding: 10px;
+}
+
+.edit-modal-body {
+  width: 100%;
+
+}
+.success-msg{
+  width: 100%;
+  display: flex;
+  text-align: center;
+  font-size: 26px;
+  color: #686AC9;
+  font-weight: 600;
+   font-family: 'Inter', sans-serif;
+  ;
+  
+}

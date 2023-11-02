@@ -1,0 +1,450 @@
+<link rel="stylesheet" href="app/style/css/studentRegistration.css">
+<div ng-controller="studentRegistrationController" class="student-registration">
+
+    <div class="heading">
+        <h2>Student details</h2>
+    </div>
+
+    <div ng-show="currentPage==='one'" class="container">
+        <form name="studentFormOne" method="post" novalidate>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-4 d-flex justify-content-start align-items-center">
+                                <label for="firstName" style="margin: 0px;">First Name</label>
+                            </div>
+                            <div class="col-md-7 d-flex flex-column">
+                                <input type="text" class="form-control" placeholder="Enter First Name" name="firstName"
+                                    ng-model="student.firstName" id="firstName" ng-required="true"
+                                    ng-pattern="/^[a-zA-Z]+$/" apply-error-class>
+                                <span class="err-span" ng-show="studentFormOne.firstName.$error.pattern">Name should
+                                    contain only
+                                    alphabets.
+                                </span>
+                                <span class="err-span"
+                                    ng-show="studentFormOne.$submitted && studentFormOne.firstName.$error.required">
+                                    First name must be entered
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-4 d-flex justify-content-start align-items-center">
+                                <label for="lastName" style="margin: 0px;">Last Name</label>
+                            </div>
+                            <div class="col-md-7 d-flex flex-column">
+                                <input type="text" class="form-control" placeholder="Enter Last Name" name="lastName"
+                                    ng-model="student.lastName" id="lastName" ng-required="true"
+                                    ng-pattern="/^[a-zA-Z]+$/" apply-error-class>
+                                <span class="err-span" ng-show="studentFormOne.lastName.$error.pattern">Name should
+                                    contain only
+                                    alphabets.
+                                </span>
+                                <span class="err-span"
+                                    ng-show="studentFormOne.$submitted && studentFormOne.lastName.$error.required">
+                                    Last name must be entered
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-4 d-flex justify-content-start align-items-center">
+                                <label for="gender" style="margin: 0px;">Gender</label>
+                            </div>
+                            <div class="col-md-7 d-flex flex-column">
+                                <select class="form-control" name="gender" id="gender" ng-model="student.gender"
+                                    ng-required="true" apply-error-class>
+                                    <option value="" disabled>Select the gender</option>
+                                    <option ng-repeat="gender in genders">{{ gender }}</option>
+                                </select>
+
+                                <span class="err-span"
+                                    ng-show="studentFormOne.$submitted && studentFormOne.gender.$error.required">
+                                    Gender must be choosen</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-4 d-flex justify-content-start align-items-center">
+                                <label for="dateOfBirth" style="margin: 0px;">Date of Birth</label>
+                            </div>
+                            <div class="col-md-7 d-flex flex-column">
+                                <input id="dateOfBirth" class="form-control" type="text" onfocus="(this.type='date')"
+                                    onblur="(this.type='text')" placeholder="Choose your date" name="dateOfBirth"
+                                    ng-model="student.dateOfBirth" ng-required="true" apply-error-class>
+                                <span class="err-span"
+                                    ng-show="studentFormOne.$submitted && studentFormOne.dateOfBirth.$error.required">
+                                    Date of Birth must be choosen</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-4 d-flex justify-content-start align-items-center">
+                                <label for="email" style="margin: 0px;">E-Mail</label>
+                            </div>
+                            <div class="col-md-7 d-flex flex-column">
+                                <input class="form-control" type="email" placeholder="Enter E-Mail Address"
+                                    ng-model="student.email" id="email" name="email" ng-required="true" custom-email
+                                    apply-error-class>
+                                <span class="err-span" ng-show="studentFormOne.email.$error.customEmail">Invalid email
+                                    format.</span>
+                                <span class="err-span"
+                                    ng-show="studentFormOne.$submitted && studentFormOne.email.$error.required">
+                                    E-mail address must be entered
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-4 d-flex justify-content-start align-items-center">
+                                <label for="phoneNumber" style="margin: 0px;">Phone Number</label>
+                            </div>
+                            <div class="col-md-7 d-flex flex-column">
+                                <input class="form-control" ng-maxlength="10" type="number"
+                                    placeholder="Enter Phone Number" ng-model="student.phoneNumber" id="phoneNumber"
+                                    name="phoneNumber" ng-required="true" ng-minlength="8" apply-error-class>
+                                <span class="err-span"
+                                    ng-show="studentFormOne.$submitted && studentFormOne.phoneNumber.$error.required">
+                                    Phone number must be entered
+                                </span>
+                                <span class="err-span" ng-show="studentFormOne.phoneNumber.$error.maxlength">Enter valid
+                                    Phone
+                                    Number</span>
+                                <span class="err-span" ng-show="studentFormOne.phoneNumber.$error.minlength">Enter valid
+                                    Phone
+                                    Number</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+            <div class="row">
+                <div class="col-md-6 custom-height">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-4 d-flex justify-content-start align-items-center">
+                                <label for="nationality" style="margin: 0px;">Nationality</label>
+                            </div>
+                            <div class="col-md-7 d-flex flex-column">
+                                <input class="form-control" type="text" placeholder="Enter Nationality"
+                                    ng-model="student.nationality" name="nationality" id="nationality"
+                                    ng-required="true" apply-error-class>
+                                <span class="err-span"
+                                    ng-show="studentFormOne.$submitted && studentFormOne.nationality.$error.required">
+                                    Nationality must be entered</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-4 d-flex justify-content-start align-items-center">
+                                <label for="motherTongue" style="margin: 0px;">Mother Tongue</label>
+                            </div>
+                            <div class="col-md-7 d-flex flex-column">
+                                <input class="form-control" type="text" placeholder="Enter Mother Tongue"
+                                    ng-model="student.motherTongue" name="motherTongue" id="motherTongue"
+                                    ng-required="true" apply-error-class>
+                                <span class="err-span"
+                                    ng-show="studentFormOne.$submitted && studentFormOne.motherTongue.$error.required">
+                                    Mother tongue must be entered</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-4 d-flex flex-column justify-content-start align-items-center">
+                                <label for="permanentAddress">Permanent Address</label>
+                                <input type="checkbox" ng-checked="isPermanentChecked" ng-click="copyToCurrent()"
+                                    class="custom-checkbox" id="copyAddress1">
+                                <label for="copyAddress1" class="copy-address">Copy address</label>
+                            </div>
+                            <div class="col-md-7 d-flex flex-column">
+                                <textarea placeholder="Enter Permanent Address" class="form-control"
+                                    id="permanentAddress" rows="5" cols="" name="permanentAddress"
+                                    ng-model="student.permanentAddress" ng-required="true" ng-minlength="10"
+                                    apply-error-class></textarea>
+                                <span class="err-span"
+                                    ng-show="studentFormOne.permanentAddress.$error.minlength">Minimum 10 characters
+                                    required</span>
+                                <span class="err-span"
+                                    ng-show="studentFormOne.$submitted && studentFormOne.permanentAddress.$error.required">
+                                    Permanent Address must be entered</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-4 d-flex flex-column justify-content-start align-items-center">
+                                <label for="currentAddress">Current Address</label>
+                                <input type="checkbox" ng-checked="isCurrentChecked"
+                                    ng-click="copyToPermanent()" class="custom-checkbox" id="copyAddress2">
+                                <label for="copyAddress2" class="copy-address">Copy address</label>
+                            </div>
+                            <div class="col-md-7 d-flex flex-column">
+                                <textarea ng-minlength="10" placeholder="Enter Current Address" class="form-control"
+                                    id="currentAddress" rows="5" cols="" name="currentAddress"
+                                    ng-model="student.currentAddress" ng-required="true" apply-error-class></textarea>
+                                <span class="err-span" ng-show="studentFormOne.currentAddress.$error.minlength">Minimum
+                                    10 characters
+                                    required</span>
+                                <span class="err-span"
+                                    ng-show="studentFormOne.$submitted && studentFormOne.currentAddress.$error.required">
+                                    Current Address must be entered</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="student-btn-div">
+
+                <button class="student-form-button" ng-click="nextPage()">NEXT</button>
+
+
+                <button class="student-form-button" ng-click="viewStudents()">View students</button>
+
+            </div>
+        </form>
+    </div>
+
+
+
+
+    <div ng-show="currentPage==='two'" class="student-registration-form" ng-submit="saveForm()">
+
+        <form name="studentFormTwo" method="post" novalidate>
+            <div class="student-form-row">
+                <div class="student-form-column">
+                    <label class="student-reg-label" for="fathersName">Father's Name</label>
+                    <div class="input-error">
+                        <input class="student-reg-input" type="text" placeholder="Enter Father's Name" name="fathersName"
+                            ng-model="student.fatherName" id="fathersName" ng-required="true" apply-error-class
+                            ng-pattern="/^[a-zA-Z\s]+$/">
+                        <span ng-show="studentFormTwo.$submitted && studentFormTwo.fathersName.$error.required">
+                            Father's name must be entered
+                        </span>
+                        <span ng-show="studentFormTwo.fathersName.$error.pattern">Name should contain only
+                            alphabets.</span>
+
+                    </div>
+                </div>
+
+                <div class="student-form-column">
+
+                    <label class="student-reg-label" for="motherName">Mother's Name</label>
+
+                    <div class="input-error">
+                        <input class="student-reg-input" type="text" placeholder="Enter Mother's Name" name="motherName"
+                            ng-model="student.motherName" id="motherName" ng-required="true"
+                            ng-pattern="/^[a-zA-Z\s]+$/" apply-error-class>
+                        <span ng-show="studentFormTwo.$submitted && studentFormTwo.motherName.$error.required">
+                            Mother's name must be entered
+                        </span>
+                        <span ng-show="studentFormTwo.motherName.$error.pattern">Name should contain only
+                            alphabets.</span>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="student-form-row">
+                <div class="student-form-column">
+                    <label class="student-reg-label" for="">Degree Type</label>
+                    <div class="student-reg-unique-input">
+                        <div class="radio-main-div">
+                            <div class="radio-div">
+                                <input type="radio" name="fullTime" ng-model="student.degreeType" id="fullTime"
+                                    value="Full Time">
+
+                                <label for="fullTime">Full-time</label>
+                            </div>
+
+                            <div class="radio-div">
+                                <input type="radio" name="partTime" ng-model="student.degreeType" id="partTime"
+                                    value="Part Time" ng-checked="true">
+
+                                <label for="partTime">Part-time</label>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="student-form-column">
+
+                    <label class="student-reg-label" for="partTimeTimings">Part Time Timings</label>
+
+                    <div class="input-error dropdown-info">
+                        <select class="student-reg-input" name="partTimeTimings" id="partTimeTimings"
+                            ng-model="student.partTimeTiming" ng-required="true"
+                            ng-disabled="student.degreeType === 'Full Time'">
+                            <option value="" disabled>Choose part time timings</option>
+                            <option ng-repeat="partTimeTiming in partTimeTimings">{{ partTimeTiming }}</option>
+                        </select>
+                        <span
+                            ng-show="studentFormTwo.$submitted && studentFormTwo.partTimeTimings.$error.required  && student.degreeType != 'fullTime'">
+                            Select part time timings
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="student-form-row">
+                <div class="student-form-column">
+                    <label class="student-reg-label" for="degree">Degree</label>
+                    <div class="input-error dropdown-info">
+                        <select class="student-reg-input" name="degree" id="degree" ng-model="student.degree"
+                            ng-required="true" apply-error-class>
+                            <option value="" disabled>Choose bachelors degree</option>
+                            <option ng-repeat="degree in degrees">{{ degree }}</option>
+                        </select>
+                        <span ng-show="studentFormTwo.$submitted && studentFormTwo.degree.$error.required">
+                            Degree must be chosen
+                        </span>
+
+                    </div>
+                </div>
+
+                <div class="student-form-column">
+
+                    <label class="student-reg-label" for="department">Department</label>
+
+                    <div class="input-error dropdown-info">
+                        <select class="student-reg-input" name="department" id="department"
+                            ng-model="student.department" ng-required="true" ng-disabled="student.degree == 'BCA'">
+                            <option value="" disabled>Choose bachelors degree</option>
+                            <option ng-repeat="department in departments">{{ department }}</option>
+                        </select>
+                        <span
+                            ng-show="studentFormTwo.$submitted && studentFormTwo.department.$error.required && student.degree != 'BCA'">
+                            Department must be chosen
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="heading">
+                <h2>Previous education details</h2>
+            </div>
+
+            <div class="student-education-detail">
+                <div class="student-education-label">
+
+                    <label class="student-education-label1 unique-label" for="qualification">Qualification</label>
+                    <label class="student-education-label2 unique-label" for="year">Year</label>
+                    <label class="student-education-label3 unique-label" for="institutionType">Institution Type</label>
+                    <label class="student-education-label4 unique-label" for="institutionName">Institution Name</label>
+                    <span class="invisible"><img src="app/style/images/icon.png" alt=""></span>
+
+                </div>
+
+
+                <div ng-repeat="(index, qualification) in student.qualifications"
+                    class="student-education-input">
+
+                    <input class="student-education-input-qualification" type="text" placeholder="Qualification"
+                        ng-model="qualification.qualification" name="qualification" ng-required="true"
+                        apply-error-class>
+                    <input class="student-education-input-year" ng-minlength="4" ng-maxlength="4" type="number"
+                        placeholder="Year" ng-model="qualification.year" name="year" ng-required="true"
+                        apply-error-class>
+                    <input class="student-education-input-type" type="text" placeholder="Institution Type"
+                        ng-model="qualification.institutionType" name="institutionType" ng-required="true"
+                        apply-error-class>
+                    <input class="student-education-input-name" name="institutionName" type="text"
+                        placeholder="Institution Name" ng-model="qualification.institutionName" ng-required="true" apply-error-class>
+                    <span ng-class="{'invisible': index===0}" ng-click="removeQualification(index)"><img
+                            src="app/style/images/icon.png" alt=""></span>
+
+                </div>
+
+            </div>
+            <div class="add-btn">
+                <button type="button" ng-click="addQualification()" class="student-form-button ">+ Add
+                    qualification</button>
+            </div>
+
+            <div class="student-btn-div">
+              
+                    <input type="submit" value="Save" ng-click="submitForm()" class="student-form-button">
+             
+               
+                    <button type="button" class="student-form-button">View students</button>
+               
+            </div>
+        </form>
+    </div>
+</div>

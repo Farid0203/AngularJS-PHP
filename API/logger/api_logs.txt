@@ -1,0 +1,245 @@
+[2023-10-30 05:51:07] inside if condition
+[2023-10-30 05:51:07] inside insert funcction
+[2023-10-30 05:51:07] DB error: Unknown column 'first_name' in 'field list'
+[2023-10-30 05:51:19] inside if condition
+[2023-10-30 05:51:19] inside insert funcction
+[2023-10-30 05:51:19] DB error: Unknown column 'first_name' in 'field list'
+[2023-10-30 05:59:19] inside if condition
+[2023-10-30 05:59:19] inside insert funcction
+[2023-10-30 05:59:19] DB error: Unknown column 'first_name' in 'field list'
+[2023-10-30 05:59:21] inside if condition
+[2023-10-30 05:59:21] inside insert funcction
+[2023-10-30 05:59:21] DB error: Unknown column 'first_name' in 'field list'
+[2023-10-30 05:59:23] inside if condition
+[2023-10-30 05:59:23] inside insert funcction
+[2023-10-30 05:59:23] DB error: Unknown column 'first_name' in 'field list'
+[2023-10-30 06:07:20] inside if condition
+[2023-10-30 06:07:20] inside insert funcction
+[2023-10-30 06:07:20] inside insert detail
+[2023-10-30 06:07:20] DB error: Unknown column 'first_name' in 'field list'
+[2023-10-30 06:13:31] inside if condition
+[2023-10-30 06:13:31] inside insert funcction
+[2023-10-30 06:14:01] inside if condition
+[2023-10-30 06:14:01] inside insert funcction
+[2023-10-30 06:14:01] inside insert detail
+[2023-10-30 06:14:01] DB error: Unknown column 'first_name' in 'field list'
+[2023-10-30 06:14:16] inside if condition
+[2023-10-30 06:14:16] inside insert funcction
+[2023-10-30 06:14:16] inside insert detail
+[2023-10-30 06:14:16] DB error: Unknown column 'first_name' in 'field list'
+[2023-10-30 06:14:17] inside if condition
+[2023-10-30 06:14:17] inside insert funcction
+[2023-10-30 06:14:17] inside insert detail
+[2023-10-30 06:14:17] DB error: Unknown column 'first_name' in 'field list'
+[2023-10-30 06:14:18] inside if condition
+[2023-10-30 06:14:18] inside insert funcction
+[2023-10-30 06:14:18] inside insert detail
+[2023-10-30 06:14:18] DB error: Unknown column 'first_name' in 'field list'
+[2023-10-30 06:14:30] inside if condition
+[2023-10-30 06:14:30] inside insert funcction
+[2023-10-30 06:14:30] inside insert detail
+[2023-10-30 06:14:30] DB error: Throwed
+[2023-10-30 06:14:32] inside if condition
+[2023-10-30 06:14:32] inside insert funcction
+[2023-10-30 06:14:32] inside insert detail
+[2023-10-30 06:14:32] DB error: Throwed
+[2023-10-30 06:14:33] inside if condition
+[2023-10-30 06:14:33] inside insert funcction
+[2023-10-30 06:14:33] inside insert detail
+[2023-10-30 06:14:33] DB error: Throwed
+[2023-10-30 06:14:47] inside if condition
+[2023-10-30 06:14:47] inside insert funcction
+[2023-10-30 06:14:47] DB error: Throwed
+[2023-10-30 06:16:32] inside if condition
+[2023-10-30 06:16:32] inside insert funcction
+[2023-10-30 06:16:32] DB error: Throwed
+[2023-10-30 06:16:55] inside if condition
+[2023-10-30 06:16:55] inside insert funcction
+[2023-10-30 06:16:55] DB error: Throwed
+[2023-10-30 06:17:20] inside if condition
+[2023-10-30 06:17:20] inside insert funcction
+[2023-10-30 06:17:30] inside if condition
+[2023-10-30 06:17:30] inside insert funcction
+[2023-10-30 06:17:30] DB error: Throwed
+[2023-10-30 06:18:34] inside if condition
+[2023-10-30 06:18:34] inside insert funcction
+[2023-10-30 06:18:34] DB error: Throwed
+[2023-10-30 06:19:03] inside if condition
+[2023-10-30 06:19:03] DB error: Throwed
+[2023-10-30 06:19:39] inside if condition
+[2023-10-30 06:19:39] DB error: Throwed
+[2023-10-30 06:20:01] inside if condition
+[2023-10-30 06:20:01] DB error: Unknown column 'first_name' in 'field list'
+[2023-10-30 06:20:22] inside if condition
+[2023-10-30 06:20:22] DB error: Unknown column 'first_name' in 'field list'
+[2023-10-30 06:20:23] inside if condition
+[2023-10-30 06:20:23] DB error: Unknown column 'first_name' in 'field list'
+[2023-10-30 06:20:42] inside if condition
+[2023-10-30 06:20:42] DB error: Unknown column 'first_name' in 'field list'
+[2023-10-30 06:21:04] inside if condition
+[2023-10-30 06:21:04] DB error: Unknown column 'first_name' in 'field list'
+[2023-10-30 06:21:05] inside if condition
+[2023-10-30 06:21:05] DB error: Unknown column 'first_name' in 'field list'
+[2023-10-30 06:21:06] inside if condition
+[2023-10-30 06:21:06] DB error: Unknown column 'first_name' in 'field list'
+[2023-10-30 06:21:06] inside if condition
+[2023-10-30 06:21:06] DB error: Unknown column 'first_name' in 'field list'
+[2023-10-30 06:21:07] inside if condition
+[2023-10-30 06:21:07] DB error: Unknown column 'first_name' in 'field list'
+[2023-10-30 06:21:38] inside if condition
+[2023-10-30 06:21:38] DB error: Unknown column 'first_name' in 'field list'
+[2023-10-30 06:21:49] inside if condition
+[2023-10-30 06:21:49] DB error: Unknown column 'first_name' in 'field list'
+[2023-10-30 06:27:03] inside if condition
+[2023-10-30 06:27:03] DB error: Unknown column 'first_name' in 'field list'
+[2023-10-30 06:30:22] inside if condition
+[2023-10-30 06:30:22] DB error: Unknown column 'first_name' in 'field list'
+[2023-10-30 06:30:34] inside if condition
+[2023-10-30 06:30:34] DB error: Unknown column 'first_name' in 'field list'
+[2023-10-30 06:33:37] inside if condition
+[2023-10-30 06:35:51] inside if condition
+[2023-10-30 06:35:51] Student ID: 17 inserted successfully
+[2023-10-30 06:35:51] Qualification inserted successfully for student ID 17
+[2023-10-30 06:35:51] Qualification inserted successfully for student ID 17
+[2023-10-30 06:37:10] inside if condition
+[2023-10-30 06:37:10] inside insert detail
+[2023-10-30 06:37:10] Student ID: 18 inserted successfully
+[2023-10-30 06:37:10] Qualification inserted successfully for student ID 18
+[2023-10-30 06:37:10] Qualification inserted successfully for student ID 18
+[2023-10-30 06:45:14] inside if condition
+[2023-10-30 06:45:14] inside insert detail
+[2023-10-30 06:45:14] Student ID: 19 inserted successfully
+[2023-10-30 06:45:14] Qualification inserted successfully for student ID 19
+[2023-10-30 06:53:29] inside if condition
+[2023-10-30 06:53:29] inside insert detail
+[2023-10-30 06:53:29] Student ID: 20 inserted successfully
+[2023-10-30 06:53:29] Qualification inserted successfully for student ID 20
+[2023-10-30 07:07:46] inside if condition
+[2023-10-30 07:07:46] inside insert detail
+[2023-10-30 07:07:46] Student ID: 21 inserted successfully
+[2023-10-30 07:07:46] Qualification inserted successfully for student ID 21
+[2023-10-30 07:47:32] inside if condition
+[2023-10-30 07:47:32] inside insert detail
+[2023-10-30 07:47:32] Student ID: 22 inserted successfully
+[2023-10-30 07:47:32] Qualification inserted successfully for student ID 22
+[2023-10-30 08:05:41] inside if condition
+[2023-10-30 08:05:41] inside insert detail
+[2023-10-30 08:05:41] Student ID: 23 inserted successfully
+[2023-10-30 08:05:41] Qualification inserted successfully for student ID 23
+[2023-10-30 08:16:13] inside if condition
+[2023-10-30 08:16:13] inside insert detail
+[2023-10-30 08:16:13] Student ID: 24 inserted successfully
+[2023-10-30 08:16:13] Qualification inserted successfully for student ID 24
+[2023-10-30 08:23:13] inside if condition
+[2023-10-30 08:23:13] inside insert detail
+[2023-10-30 08:23:13] Student ID: 25 inserted successfully
+[2023-10-30 08:23:13] Qualification inserted successfully for student ID 25
+[2023-10-30 08:54:32] inside if condition
+[2023-10-30 08:54:32] inside insert detail
+[2023-10-30 08:54:32] Student ID: 26 inserted successfully
+[2023-10-30 08:54:32] Qualification inserted successfully for student ID 26
+[2023-10-31 09:38:45] inside if condition
+[2023-10-31 09:38:45] inside insert detail
+[2023-10-31 09:38:45] Student ID: 28 inserted successfully
+[2023-10-31 09:38:45] Qualification inserted successfully for student ID 28
+[2023-10-31 09:38:45] Qualification inserted successfully for student ID 28
+[2023-10-31 09:38:45] inside successful result 1
+[2023-10-31 09:38:46] SMTP Error: Could not connect to SMTP host. Failed to connect to server
+[2023-10-31 10:44:52] inside insert detail
+[2023-10-31 10:44:52] Failed to send email
+[2023-10-31 10:44:52] Student ID: 29 inserted successfully
+[2023-10-31 10:44:52] Qualification inserted successfully for student ID 29
+[2023-10-31 10:44:52] Qualification inserted successfully for student ID 29
+[2023-10-31 10:45:32] inside insert detail
+[2023-10-31 10:45:32] Failed to send email
+[2023-10-31 10:45:32] Student ID: 30 inserted successfully
+[2023-10-31 10:45:32] Qualification inserted successfully for student ID 30
+[2023-10-31 10:45:32] Qualification inserted successfully for student ID 30
+[2023-10-31 10:50:04] inside insert detail
+[2023-10-31 10:50:05] Failed to send email
+[2023-10-31 10:50:05] Student ID: 31 inserted successfully
+[2023-10-31 10:50:05] Qualification inserted successfully for student ID 31
+[2023-10-31 10:50:05] Qualification inserted successfully for student ID 31
+[2023-10-31 10:50:59] inside insert detail
+[2023-10-31 10:50:59] Failed to send email
+[2023-10-31 10:50:59] Student ID: 32 inserted successfully
+[2023-10-31 10:50:59] Qualification inserted successfully for student ID 32
+[2023-10-31 10:50:59] Qualification inserted successfully for student ID 32
+[2023-10-31 10:51:34] inside insert detail
+[2023-10-31 10:51:34] Failed to send email
+[2023-10-31 10:51:34] Student ID: 33 inserted successfully
+[2023-10-31 10:51:34] Qualification inserted successfully for student ID 33
+[2023-10-31 10:51:34] Qualification inserted successfully for student ID 33
+[2023-10-31 10:53:36] inside insert detail
+[2023-10-31 10:53:36] Failed to send email
+[2023-10-31 10:53:36] Student ID: 34 inserted successfully
+[2023-10-31 10:53:36] Qualification inserted successfully for student ID 34
+[2023-10-31 10:53:36] Qualification inserted successfully for student ID 34
+[2023-10-31 10:53:39] inside insert detail
+[2023-10-31 10:53:39] Failed to send email
+[2023-10-31 10:53:39] Student ID: 35 inserted successfully
+[2023-10-31 10:53:39] Qualification inserted successfully for student ID 35
+[2023-10-31 10:53:39] Qualification inserted successfully for student ID 35
+[2023-10-31 10:55:36] inside insert detail
+[2023-10-31 10:55:36] Failed to send email
+[2023-10-31 10:55:36] Student ID: 36 inserted successfully
+[2023-10-31 10:55:36] Qualification inserted successfully for student ID 36
+[2023-10-31 10:55:36] Qualification inserted successfully for student ID 36
+[2023-10-31 11:00:16] inside insert detail
+[2023-10-31 11:00:17] Failed to send email
+[2023-10-31 11:00:17] Student ID: 37 inserted successfully
+[2023-10-31 11:00:17] Qualification inserted successfully for student ID 37
+[2023-10-31 11:00:17] Qualification inserted successfully for student ID 37
+[2023-10-31 11:06:43] inside insert detail
+[2023-10-31 11:06:44] Failed to send email
+[2023-10-31 11:06:44] Student ID: 38 inserted successfully
+[2023-10-31 11:06:44] Qualification inserted successfully for student ID 38
+[2023-10-31 11:06:44] Qualification inserted successfully for student ID 38
+[2023-10-31 11:07:53] inside insert detail
+[2023-10-31 11:07:57] Email sent
+[2023-10-31 11:07:57] Student ID: 39 inserted successfully
+[2023-10-31 11:07:57] Qualification inserted successfully for student ID 39
+[2023-10-31 11:07:57] Qualification inserted successfully for student ID 39
+[2023-10-31 11:27:11] inside insert detail
+[2023-10-31 11:27:14] Email sent
+[2023-10-31 11:27:14] Student ID: 40 inserted successfully
+[2023-10-31 11:27:14] Qualification inserted successfully for student ID 40
+[2023-10-31 11:27:14] Qualification inserted successfully for student ID 40
+[2023-10-31 11:27:51] inside insert detail
+[2023-10-31 11:27:55] Email sent successfully
+[2023-10-31 11:27:55] Email sent
+[2023-10-31 11:27:55] Student ID: 41 inserted successfully
+[2023-10-31 11:27:55] Qualification inserted successfully for student ID 41
+[2023-10-31 11:27:55] Qualification inserted successfully for student ID 41
+[2023-10-31 13:10:36] inside insert detail
+[2023-10-31 13:10:40] Email sent successfully
+[2023-10-31 13:10:40] Student ID: 42 inserted successfully
+[2023-10-31 13:10:40] Qualification inserted successfully for student ID 42
+[2023-10-31 13:10:40] Qualification inserted successfully for student ID 42
+[2023-10-31 13:13:40] inside insert detail
+[2023-10-31 13:13:44] Email sent successfully
+[2023-10-31 13:13:44] Student ID: 43 inserted successfully
+[2023-10-31 13:13:44] Qualification inserted successfully for student ID 43
+[2023-10-31 13:13:44] Qualification inserted successfully for student ID 43
+[2023-10-31 13:14:44] inside insert detail
+[2023-10-31 13:14:48] Email sent successfully
+[2023-10-31 13:14:48] Student ID: 44 inserted successfully
+[2023-10-31 13:14:48] Qualification inserted successfully for student ID 44
+[2023-10-31 13:14:48] Qualification inserted successfully for student ID 44
+[2023-10-31 13:49:33] inside insert detail
+[2023-10-31 13:49:36] Email sent successfully
+[2023-10-31 13:49:36] Student ID: 45 inserted successfully
+[2023-10-31 13:49:36] Qualification inserted successfully for student ID 45
+[2023-10-31 13:49:36] Qualification inserted successfully for student ID 45
+[2023-11-01 10:05:47] DB error: Unknown column 'admin_id' in 'where clause'
+[2023-11-01 10:06:08] DB error: Unknown column 'admin_id' in 'where clause'
+[2023-11-01 10:06:35] Student with ID: 1 fetched successfully
+[2023-11-02 10:45:44] inside insert detail
+[2023-11-02 10:45:49] Email sent successfully
+[2023-11-02 10:45:49] Student ID: 46 inserted successfully
+[2023-11-02 10:45:49] Qualification inserted successfully for student ID 46
+[2023-11-02 13:32:45] inside insert detail
+[2023-11-02 13:32:47] Email sending failed with an exception: SMTP Error: Could not authenticate.
+[2023-11-02 13:32:47] Failed to send email
+[2023-11-02 13:32:47] Student ID: 47 inserted successfully
+[2023-11-02 13:32:47] Qualification inserted successfully for student ID 47

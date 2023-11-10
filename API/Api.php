@@ -110,10 +110,10 @@ class Controller
         }
     }
 
-    public function deleteDetails($studentId)
+    public function deleteDetails($studentId,$studentName)
     {
 
-        $result = $this->studentModel->deleteDetailsINDB($studentId);
+        $result = $this->studentModel->deleteDetailsINDB($studentId,$studentName);
 
         if ($result) {
 
@@ -153,6 +153,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_REQUEST['action']) && $_REQ
 } elseif ($_SERVER['REQUEST_METHOD'] === 'DELETE') {
     // Check if the student ID is provided in the request (either in the URL or request body)
     $studentId = isset($_REQUEST['id']) ? $_REQUEST['id'] : null;
+
+    $studentName= isset($_REQUEST['name'])? $_REQUEST['name']: null;
+
     if ($studentId == null || !is_numeric($studentId)) {
         $response = array(
             "status" => "Failed",
@@ -162,7 +165,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_REQUEST['action']) && $_REQ
         http_response_code(400);
         echo json_encode($response);
     } else {
-        $controller->deleteDetails($studentId);
+        $controller->deleteDetails($studentId,$studentName);
     }
 } if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     // Check the request URL to determine the endpoint
@@ -228,8 +231,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_REQUEST['action']) && $_REQ
     } else {
         $controller->updateDetails($studentId, $updatedData);
     }
-} else {
-    header("Content-Type: application/json");
-    http_response_code(404);
-    echo json_encode(array("status" => "Failed", "message" => "Invalid request data"));
-}
+} 
+
+
+
+// else {
+//     header("Content-Type: application/json");
+//     http_response_code(404);
+//     echo json_encode(array("status" => "Failed", "message" => "Invalid request data"));
+// }

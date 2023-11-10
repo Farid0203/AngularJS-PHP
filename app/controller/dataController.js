@@ -71,7 +71,7 @@ app.controller('dataController', ['$scope', '$location', '$http', '$rootScope', 
           },
           "lengthMenu": [5, 10, 25, 50, 100],
           "columnDefs": [
-            { "orderable": false, "targets": [0, 3, 4, 5, 6, 7] } // Disable sorting for specified columns
+            { "orderable": false, "targets": [0, 3, 4, 5, 6, 7, 8] } // Disable sorting for specified columns
           ],
           "order": [[1, 'asc']]
         });
@@ -124,6 +124,27 @@ app.controller('dataController', ['$scope', '$location', '$http', '$rootScope', 
 
 
   };
+
+  $scope.deleteStudent = function (studentId,studentName) {
+    $http({
+      method: 'DELETE',
+      url: 'http://localhost/AngularJS_Unit2_6/API/Api.php',
+      params: {
+        id: studentId,
+        name: studentName
+    }
+    }).then(function (response) {
+      // Success callback
+      console.log('Delete successful:', response.data);
+      // Do something if needed
+    }, function (error) {
+      // Error callback
+      console.error('Delete failed:', error.data);
+      // Handle errors or show a message to the user
+    });
+
+
+  }
 
   // $scope.updateStudentData = function (updatedStudent) {
   //   // Implement logic to update the student data
@@ -198,13 +219,15 @@ app
     };
   });
 
-app.controller('ViewController', function ($scope,$http) {
+app.controller('ViewController', function ($scope, $http) {
 
   var ctrl = this;
   ctrl.student = null;
   ctrl.generatePDF = function (student) {
+    //concatenate first name and last name for better readablity in pdf 
     const fullName = student.firstName + ' ' + student.lastName;
-    
+
+    //student details in html format
     const studentDetailsHTML = `
         <div style="text-align: center;">
             <h1>Student Registration Details</h1>
@@ -229,25 +252,27 @@ app.controller('ViewController', function ($scope,$http) {
         </div>
     `;
 
+    //call the end point which generates pdf by providing html template.
     $http.post('http://localhost/AngularJS_Unit2_6/API/service/generate_pdf.php', studentDetailsHTML, {
-        responseType: 'blob',
-        headers: { 'Content-Type': 'text/html' },
+      responseType: 'blob',
+      headers: { 'Content-Type': 'text/html' },
     })
-    .then(function (response) {
+      .then(function (response) {
         // Create a blob URL for the PDF content
         const blob = new Blob([response.data], { type: 'application/pdf' });
+        console.log(blob);
         const url = URL.createObjectURL(blob);
 
         // Open the PDF in a new tab
         window.open(url, '_blank');
-    })
-    .catch(function (error) {
+      })
+      .catch(function (error) {
         // Handle any errors that occur during the request
         console.error(error);
-    });
-};
+      });
+  };
 
-  
+
 });
 
 app.controller('EditController', function ($scope, $http, $timeout) {

@@ -6,6 +6,8 @@ require_once '/opt/lampp/htdocs/AngularJS_Unit2_6/API/service/EmailService.php';
 
 require_once '/opt/lampp/htdocs/AngularJS_Unit2_6/API/logger/Logger.php';
 
+// require_once '/opt/lampp/htdocs/AngularJS_Unit2_6/API/service/sqs-lambda-trigger.php';
+
 
 class Model
 {
@@ -75,9 +77,11 @@ class Model
 
                 $recipient = $studentData['email']; // Assuming 'email' is the key for the email address in $studentData
 
+                //creating object for email service
                 $emailService = new EmailService();
 
 
+                //call send Email function present in EmailService class to send email
                 if ($emailService->sendEmail($recipient)) {
                     Logger::logApi("Email sent successfully");
                 } else {
@@ -393,7 +397,7 @@ class Model
             return null;
         }
     }
-    public function deleteDetailsINDB($studentId)
+    public function deleteDetailsINDB($studentId, $studentName)
     {
         try {
             $query = "DELETE FROM students WHERE id = ?";
@@ -405,6 +409,14 @@ class Model
 
                 if ($stmt->affected_rows > 0) {
                     Logger::logApi("Student with ID: $studentId removed successfully");
+                    Logger::logApi("student $studentName has removed successfully");
+
+                    // $sqsProcessor = new SQSProcessor('your-region', 'your-access-key-id', 'your-secret-access-key');
+                    // $queueUrl = 'your-sqs-queue-url';
+                    // $userName = 'JohnDoe'; // You need to get the user's name from your database
+                    // $sqsProcessor->notifyUserDeletion($queueUrl, $userName);
+
+
                     $stmt->close();
                     $this->conn->close();
                     return true;

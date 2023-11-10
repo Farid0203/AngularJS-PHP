@@ -1,5 +1,6 @@
 .data-table-page {
   font-family: 'Inter', sans-serif;
+
 }
 
 .unique-column {
@@ -321,4 +322,10 @@ table {
    font-family: 'Inter', sans-serif;
   ;
   
+}
+.modal-container #editModal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

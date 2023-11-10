@@ -12,8 +12,8 @@ angular.module('myApp').controller('studentRegistrationController', ['$scope', '
     phoneNumber: '',
     permanentAddress: '',
     currentAddress: '',
-    nationality:'',
-    motherTongue:'',
+    nationality: '',
+    motherTongue: '',
     motherName: '',
     fatherName: '',
     degreeType: '',
@@ -119,8 +119,8 @@ angular.module('myApp').controller('studentRegistrationController', ['$scope', '
       $scope.currentPage = 'two';
     }
 
-   
-  
+
+
 
 
   }
@@ -132,37 +132,50 @@ angular.module('myApp').controller('studentRegistrationController', ['$scope', '
   //This function checks that all the inputs are valid and used to pop up registration is successfull
   $scope.submitForm = function () {
 
-    if ($scope.student.degreeType == "fullTime") {
+    if ($scope.student.degreeType == "Full Time") {
       $scope.studentFormTwo.partTimeTimings.$setValidity('required', true);
     }
     if ($scope.student.degree == "BCA") {
       $scope.studentFormTwo.department.$setValidity('required', true);
     }
+
+
     if ($scope.studentFormTwo.$valid) {
       // angular.toJson($scope.student, true)
 
-const studentData = JSON.stringify($scope.student);
-console.log(studentData);
+      const studentData = JSON.stringify($scope.student);
+
+      var actionParam = encodeURIComponent('addStudent');
+
+
+      $jq('#reg-success').modal('show'); // Show the edit modal
+
 
       $http({
         method: 'POST',
-        url: 'http://localhost/AngularJS_Unit2_6/API/Api.php?action=addStudent',
+        url: 'http://localhost/AngularJS_Unit2_6/API/Api.php?action=' + actionParam,
         data: studentData, // Assuming studentData is a JavaScript object
         headers: {
-            'Content-Type': 'application/json' // Specify JSON data
+          'Content-Type': 'application/json' // Specify JSON data
         }
-    }).then(function(response) {
+      }).then(function (response) {
         // Handle success response here
-        console.log(response);
-    }).catch(function(error) {
+        console.log(response.data);
+      }).catch(function (error) {
         // Handle error response here
         console.error('Error adding student:', error);
         if (error.data && angular.isObject(error.data)) {
           console.log('Response data:', error.data);
-      }
-    });
-    
+        }
+      });
 
+      // // // Attempt to parse the response data as JSON
+      // try {
+      //   var responseData = JSON.parse(error.data);
+      //   console.log('Response data:', responseData);
+      // } catch (jsonError) {
+      //   console.error('Error parsing response data as JSON:', jsonError);
+      // }
 
     }
   }
@@ -242,7 +255,7 @@ app.directive('customEmail', function () {
         if (ctrl.$isEmpty(modelValue)) {
           return true;
         }
-
+        
         if (EMAIL_REGEXP.test(viewValue)) {
           return true;
         }

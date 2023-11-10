@@ -20,7 +20,4 @@
         // Output the PDF to the browser or save it to a file
         $pdfFileName = 'student_registration_details.pdf';
         $dompdf->stream($pdfFileName);
-
-        // Return the file name to the client
-        echo $pdfFileName;
     }

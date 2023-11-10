@@ -243,3 +243,50 @@
 [2023-11-02 13:32:47] Failed to send email
 [2023-11-02 13:32:47] Student ID: 47 inserted successfully
 [2023-11-02 13:32:47] Qualification inserted successfully for student ID 47
+[2023-11-07 08:07:16] inside insert detail
+[2023-11-07 08:07:21] Email sent successfully
+[2023-11-07 08:07:21] Student ID: 48 inserted successfully
+[2023-11-07 08:07:21] Qualification inserted successfully for student ID 48
+[2023-11-07 08:18:21] inside insert detail
+[2023-11-07 08:18:25] Email sent successfully
+[2023-11-07 08:18:25] Student ID: 49 inserted successfully
+[2023-11-07 08:18:25] Qualification inserted successfully for student ID 49
+[2023-11-07 08:24:53] inside insert detail
+[2023-11-07 08:24:56] Email sent successfully
+[2023-11-07 08:24:56] Student ID: 50 inserted successfully
+[2023-11-07 08:24:56] Qualification inserted successfully for student ID 50
+[2023-11-07 08:29:50] inside insert detail
+[2023-11-07 08:29:53] Email sent successfully
+[2023-11-07 08:29:53] Student ID: 51 inserted successfully
+[2023-11-07 08:29:53] Qualification inserted successfully for student ID 51
+[2023-11-07 08:43:11] inside insert detail
+[2023-11-07 08:43:15] Email sent successfully
+[2023-11-07 08:43:15] Student ID: 52 inserted successfully
+[2023-11-07 08:43:15] Qualification inserted successfully for student ID 52
+[2023-11-07 10:06:01] inside insert detail
+[2023-11-07 10:10:08] inside insert detail
+[2023-11-07 10:10:13] Email sent successfully
+[2023-11-07 10:10:13] Student ID: 54 inserted successfully
+[2023-11-07 10:10:13] Qualification inserted successfully for student ID 54
+[2023-11-10 10:24:35] Student with ID: 54 removed successfully
+[2023-11-10 10:25:43] Student with ID: 53 removed successfully
+[2023-11-10 10:30:00] inside insert detail
+[2023-11-10 10:30:04] Email sent successfully
+[2023-11-10 10:30:04] Student ID: 55 inserted successfully
+[2023-11-10 10:30:04] Qualification inserted successfully for student ID 55
+[2023-11-10 10:30:33] No record found with ID: 53
+[2023-11-10 10:33:49] No record found with ID: 53
+[2023-11-10 10:36:44] Student with ID: 55 removed successfully
+[2023-11-10 12:05:34] inside insert detail
+[2023-11-10 12:05:43] Student with ID: 56 removed successfully
+[2023-11-10 12:05:43] student aakif has removed successfully
+[2023-11-10 12:05:51] Email sending failed with an exception: SMTP Error: Could not connect to SMTP host. Connection failed. stream_socket_enable_crypto(): SSL: Success
+[2023-11-10 12:05:51] Failed to send email
+[2023-11-10 12:05:51] Student ID: 56 inserted successfully
+[2023-11-10 12:05:51] DB error: Cannot add or update a child row: a foreign key constraint fails (`smart_hub`.`qualifications`, CONSTRAINT `qualifications_ibfk_1` FOREIGN KEY (`student_id`) REFERENCES `students` (`id`) ON DELETE CASCADE)
+[2023-11-10 12:10:40] inside insert detail
+[2023-11-10 12:11:00] Email sent successfully
+[2023-11-10 12:11:00] Student ID: 57 inserted successfully
+[2023-11-10 12:11:00] Qualification inserted successfully for student ID 57
+[2023-11-10 13:51:31] Student with ID: 57 removed successfully
+[2023-11-10 13:51:31] student Imran has removed successfully

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Data Table with Popup Options</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <style>
+    /* Add your CSS styles here */
+    .popup {
+      display: none;
+      position: absolute;
+      background: #fff;
+      border: 1px solid #ccc;
+      padding: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body ng-controller="myCtrl">
+
+  <table border="1">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="item in data">
+        <td>{{item.id}}</td>
+        <td>{{item.name}}</td>
+        <td>
+          <span class="options" ng-click="showOptions($event, $index)">...</span>
+          <div class="popup" ng-show="item.showOptions">
+            <a href="#" ng-click="editItem(item)">Edit</a>
+            <a href="#" ng-click="deleteItem(item)">Delete</a>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script>
+    angular.module('myApp', [])
+      .controller('myCtrl', function ($scope) {
+        $scope.data = [
+          { id: 1, name: 'Item 1', showOptions: false },
+          { id: 2, name: 'Item 2', showOptions: false },
+          { id: 3, name: 'Item 3', showOptions: false }
+        ];
+
+        $scope.showOptions = function (event, index) {
+          $scope.data[index].showOptions = !$scope.data[index].showOptions;
+          event.stopPropagation(); // Stop event propagation to prevent document click from immediately hiding the popup
+        };
+
+        $scope.editItem = function (item) {
+          // Implement your edit logic here
+          alert('Editing ' + item.name);
+        };
+
+        $scope.deleteItem = function (item) {
+          // Implement your delete logic here
+          alert('Deleting ' + item.name);
+        };
+
+        // Close the popup when clicking outside the popup
+        angular.element(document).on('click', function () {
+          $scope.$apply(function () {
+            angular.forEach($scope.data, function (item) {
+              item.showOptions = false;
+            });
+          });
+        });
+      });
+  </script>
+
+</body>
+</html>
